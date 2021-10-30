@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig-api.json",
+  "exclude": [
+    "node_modules",
+    ".nuxt",
+    ".nest",
+    ".output",
+    "frontend",
+    "**/*spec.ts"
+  ]
+}

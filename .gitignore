@@ -3,3 +3,9 @@ node_modules
 .nuxt
 nuxt.d.ts
 .output
+
+coverage-client
+coverage-server
+
+# nest.js build output
+.nest
