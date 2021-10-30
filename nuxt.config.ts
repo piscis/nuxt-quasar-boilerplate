@@ -1,6 +1,7 @@
 import { defineNuxtConfig } from 'nuxt3'
-// import vue from '@vitejs/plugin-vue'
 import { quasar } from '@quasar/vite-plugin'
+
+const isDev = process.env.NODE_ENV === 'development';
 
 export default defineNuxtConfig({
   ssr: false,
@@ -9,11 +10,8 @@ export default defineNuxtConfig({
     '@quasar/extras/roboto-font/roboto-font.css',
     '@quasar/extras/material-icons/material-icons.css',
   ],
+  serverMiddleware: [{ path: '/blub', handler: '~/server/test.ts' }],
   vite: {
-    //define: {
-    //  __QUASAR_SSR__: true,
-    //  __QUASAR_SSR_SERVER__: true
-    //},
     plugins: [
       quasar({
         sassVariables: 'assets/styles/quasar.variables.sass',
