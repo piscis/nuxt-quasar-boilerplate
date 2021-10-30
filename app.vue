@@ -4,9 +4,5 @@
 
 <script lang="ts">
 
-export default defineComponent({
-  setup(_props, ctx) {
-    console.log(ctx)
-  }
-})
+export default defineComponent({})
 </script>
