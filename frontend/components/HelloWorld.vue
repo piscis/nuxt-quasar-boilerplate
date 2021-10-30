@@ -21,11 +21,11 @@ import { useNuxtApp } from "#app";
 
 export default defineComponent({
   name: "HelloWorld",
-  setup(props, ctx) {
+  setup() {
     const app = useNuxtApp();
 
     const version = computed(() => {
-      return app.vueApp.version;
+      return app?.vueApp?.version || '';
     });
 
     return { version };
