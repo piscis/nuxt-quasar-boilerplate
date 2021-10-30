@@ -5,11 +5,14 @@
     "build": "nuxi build",
     "start": "node .output/server/index.mjs"
   },
-  "devDependencies": {
-    "@quasar/extras": "^1.0.0",
+  "dependencies": {
     "nuxt3": "latest",
-    "quasar": "^2.0.0",
-    "sass": "^1.43.4"
+    "quasar": "^2.2.2",
+    "@quasar/extras": "^1.11.3"
+  },
+  "devDependencies": {
+    "@quasar/vite-plugin": "^1.0.1",
+    "sass": "1.32.0"
   },
   "volta": {
     "node": "14.16.0"
