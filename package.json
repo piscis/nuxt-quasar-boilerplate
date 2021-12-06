@@ -6,9 +6,9 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
-    "nuxt3": "latest",
-    "quasar": "^2.2.2",
-    "@quasar/extras": "^1.11.3"
+    "@quasar/extras": "^1.11.3",
+    "nuxt3": "^3.0.0-27313139.1c88580",
+    "quasar": "^2.2.2"
   },
   "devDependencies": {
     "@quasar/vite-plugin": "^1.0.1",
