@@ -3,7 +3,7 @@ import { defineNuxtConfig } from "nuxt3";
 import { quasar, transformAssetUrls } from "@quasar/vite-plugin";
 
 export default defineNuxtConfig({
-  ssr: false,
+  // ssr: false,
   css: [
     "~/assets/styles/quasar.sass",
     "@quasar/extras/roboto-font/roboto-font.css",
