@@ -4,7 +4,7 @@ import { quasar } from '@quasar/vite-plugin';
 const isDev = process.env.NODE_ENV === 'development';
 
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   srcDir: 'frontend',
   build: {
     transpile: ['quasar']
