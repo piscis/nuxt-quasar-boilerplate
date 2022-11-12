@@ -1,5 +1,7 @@
 # Nuxt 3 Minimal Starter
 
+**deprecated please see main branch for updates**
+
 We recommend to look at the [documentation](https://v3.nuxtjs.org).
 
 ## Setup
