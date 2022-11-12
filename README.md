@@ -2,6 +2,8 @@
 
 We recommend to look at the [documentation](https://v3.nuxtjs.org).
 
+**Demo:** https://nuxt3-quasar.piscis.io/
+
 ## Prerequisits
 
 - PNPM >= 7.x
