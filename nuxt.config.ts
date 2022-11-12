@@ -1,28 +1,23 @@
-import { defineNuxtConfig } from "nuxt3";
-//import vue from "@vitejs/plugin-vue";
-import { quasar, transformAssetUrls } from "@quasar/vite-plugin";
+import { quasar } from "@quasar/vite-plugin";
 
 export default defineNuxtConfig({
-  // ssr: false,
-  css: [
-    "~/assets/styles/quasar.sass",
-    "@quasar/extras/roboto-font/roboto-font.css",
-    "@quasar/extras/material-icons/material-icons.css",
-  ],
   build: {
     transpile: ["quasar"],
   },
+  //ssr: false,
+  css: [
+    "@quasar/extras/roboto-font/roboto-font.css",
+    "@quasar/extras/material-icons/material-icons.css",
+    "@quasar/extras/fontawesome-v6/fontawesome-v6.css",
+    "~/assets/quasar.sass",
+  ],
   vite: {
-    //define: {
-    //  __QUASAR_SSR__: true,
-    //  __QUASAR_SSR_SERVER__: true
-    //},
+    define: {
+      // "process.env.DEBUG": false,
+    },
     plugins: [
-      //vue({
-        // template: { transformAssetUrls },
-      //}),
       quasar({
-        sassVariables: "assets/styles/quasar.variables.sass",
+        sassVariables: "assets/quasar-variables.sass",
       }),
     ],
   },
