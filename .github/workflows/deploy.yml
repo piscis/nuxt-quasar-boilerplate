@@ -10,10 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        uses: '.github/workflows/setup-node'
-        with:
-          node-version: 16
-          package-manager: "pnpm"
+        uses: ./.github/actions/setup-node
       - name: Lint code
         run: pnpm run lint
       - name: Test code
@@ -23,10 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        uses: '.github/workflows/setup-node'
-        with:
-          node-version: 16
-          package-manager: "pnpm"
+        uses: ./.github/actions/setup-node
       - name: Build
         run: pnpm run build
   deploy:
@@ -34,9 +28,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        uses: '.github/workflows/setup-node'
-        with:
-          node-version: 16
-          package-manager: "pnpm"
+        uses: ./.github/actions/setup-node
       - name: Deploy
         run: echo "Deploying..."
