@@ -30,10 +30,15 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/released' && github.event_name == 'push'
     steps:
       - name: Get code
         uses: actions/checkout@v3
       - name: Setup
         uses: ./.github/actions/setup-node
-      - name: Deploy
-        run: echo "Deploying..."
+      - uses: everlytic/branch-merge@1.1.2
+        with:
+          github_token: ${{ github.token }}
+          source_ref: ${{ github.ref }}
+          target_branch: 'released'
+          commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
