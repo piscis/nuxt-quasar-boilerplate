@@ -5,7 +5,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "echo 'test'",
+    "lint": "echo 'lint'"
   },
   "dependencies": {
     "@quasar/extras": "^1.15.5",
