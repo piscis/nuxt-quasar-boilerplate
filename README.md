@@ -1,14 +1,18 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 + Quasar 2.10 - Minimal Starter
 
 We recommend to look at the [documentation](https://v3.nuxtjs.org).
 
-## Setup
+## Prerequisits
 
+- PNPM >= 7.x
+- NodeJS 16.x
+
+## Setup
 
 Make sure to install the dependencies
 
 ```bash
-yarn install
+pnpm install --shamefully-hoist
 ```
 
 ## Development
@@ -16,7 +20,7 @@ yarn install
 Start the development server on http://localhost:3000
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ## Production
@@ -24,7 +28,7 @@ yarn dev
 Build the application for production:
 
 ```bash
-yarn build
+pnpm build
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
