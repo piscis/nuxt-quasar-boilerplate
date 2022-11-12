@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "kubernetes": "*.kube.yaml",
+        "https://json.schemastore.org/github-workflow.json": "file:///Users/alex/Desktop/nuxt-app/.github/workflows/deploy.yml"
+    }
+}
