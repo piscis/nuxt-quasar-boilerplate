@@ -9,6 +9,10 @@
     "test": "echo 'test'",
     "lint": "echo 'lint'"
   },
+  "engines": {
+    "node": "16",
+    "pnpm": "7"
+  },
   "dependencies": {
     "@quasar/extras": "^1.15.5",
     "jsdom": "^20.0.2",
