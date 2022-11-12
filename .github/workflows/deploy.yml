@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        uses: './.github/workflows/setup-node'
+        uses: '.github/workflows/setup-node'
         with:
           node-version: 16
           package-manager: "pnpm"
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup
-        uses: './.github/workflows/setup-node'
+        uses: '.github/workflows/setup-node'
         with:
           node-version: 16
           package-manager: "pnpm"
