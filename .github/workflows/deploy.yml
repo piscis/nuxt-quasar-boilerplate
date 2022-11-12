@@ -1,0 +1,40 @@
+name: Deploy website
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: '.github/workflows/install-node-dependencies'
+        with:
+          node-version: 16
+          package-manager: "pnpm"
+      - name: Lint code
+        run: pnpm run lint
+      - name: Test code
+        run: pnpm run test
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: '.github/workflows/install-node-dependencies'
+        with:
+          node-version: 16
+          package-manager: "pnpm"
+      - name: Build
+        run: pnpm run build
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup
+        uses: '.github/workflows/install-node-dependencies'
+        with:
+          node-version: 16
+          package-manager: "pnpm"
+      - name: Deploy
+        run: echo "Deploying..."
