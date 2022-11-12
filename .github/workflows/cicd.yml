@@ -1,4 +1,4 @@
-name: Deploy website
+name: Build & test project
 on:
   push:
     branches:
@@ -27,15 +27,3 @@ jobs:
         uses: ./.github/actions/setup-node
       - name: Build
         run: pnpm run build
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    steps:
-      - uses: actions/checkout@v3
-      - uses: everlytic/branch-merge@1.1.2
-        with:
-          github_token: ${{ github.token }}
-          source_ref: ${{ github.ref }}
-          target_branch: 'released'
-          commit_message_template: '[Automated] Merged {source_ref} into target {target_branch}'
