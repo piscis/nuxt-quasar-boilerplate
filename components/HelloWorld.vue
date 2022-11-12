@@ -1,3 +1,4 @@
+import { NuxtApp } from '#app';
 <template>
   <q-page class="flex flex-center">
     <q-card>
@@ -9,26 +10,16 @@
         />
       </q-card-section>
       <q-card-section>
-        <p class="text-center">@NUXT3 Beta: vue@{{ version }}</p>
+        <p class="text-center">@NUXT3 RC13: vue@{{ version }}</p>
       </q-card-section>
     </q-card>
   </q-page>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-import { useNuxtApp } from "#app";
+<script setup lang="ts">
+const app = useNuxtApp();
 
-export default defineComponent({
-  name: "HelloWorld",
-  setup(props, ctx) {
-    const app = useNuxtApp();
-
-    const version = computed(() => {
-      return app.vueApp.version;
-    });
-
-    return { version };
-  },
+const version = computed(() => {
+  return app.vueApp.version;
 });
 </script>
