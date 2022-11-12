@@ -1,8 +1,7 @@
 <template>
-  <nuxt-page />
+  <div>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
-
-<script lang="ts">
-
-export default defineComponent({})
-</script>
