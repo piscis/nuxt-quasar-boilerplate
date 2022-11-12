@@ -32,10 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     steps:
-      - name: Get code
-        uses: actions/checkout@v3
-      - name: Setup
-        uses: ./.github/actions/setup-node
+      - uses: actions/checkout@v3
       - uses: everlytic/branch-merge@1.1.2
         with:
           github_token: ${{ github.token }}
