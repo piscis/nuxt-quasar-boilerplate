@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     "@quasar/extras/roboto-font/roboto-font.css",
     "@quasar/extras/material-icons/material-icons.css",
     "@quasar/extras/fontawesome-v6/fontawesome-v6.css",
-    "~/assets/quasar.sass",
+    "~/assets/styles/quasar.sass",
   ],
   vite: {
     define: {
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     },
     plugins: [
       quasar({
-        sassVariables: "assets/quasar-variables.sass",
+        sassVariables: "assets/styles/quasar-variables.sass",
       }),
     ],
   },
