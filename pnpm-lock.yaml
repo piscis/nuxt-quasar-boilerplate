@@ -7,7 +7,6 @@ specifiers:
   '@quasar/extras': ^1.15.5
   '@quasar/vite-plugin': ^1.2.3
   '@types/jsdom': ^20.0.1
-  domino: ^2.1.6
   jsdom: ^20.0.2
   nuxt: 3.0.0-rc.13
   quasar: ^2.10.1
@@ -15,7 +14,6 @@ specifiers:
 
 dependencies:
   '@quasar/extras': 1.15.5
-  domino: 2.1.6
   jsdom: 20.0.2
   quasar: 2.10.1
 
@@ -1772,10 +1770,6 @@ packages:
     dependencies:
       domelementtype: 2.3.0
     dev: true
-
-  /domino/2.1.6:
-    resolution: {integrity: sha512-3VdM/SXBZX2omc9JF9nOPCtDaYQ67BGp5CoLpIQlO2KCAPETs8TcDHacF26jXadGbvUteZzRTeos2fhID5+ucQ==}
-    dev: false
 
   /domutils/2.8.0:
     resolution: {integrity: sha512-w96Cjofp72M5IIhpjgobBimYEfoPjx1Vx0BSX9P30WBdZW2WIKU0T1Bd0kz2eNZ9ikjKgHbEyKx8BB6H1L3h3A==}
