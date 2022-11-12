@@ -4,7 +4,6 @@ export default defineNuxtConfig({
   build: {
     transpile: ["quasar"],
   },
-  //ssr: false,
   css: [
     "@quasar/extras/roboto-font/roboto-font.css",
     "@quasar/extras/material-icons/material-icons.css",
