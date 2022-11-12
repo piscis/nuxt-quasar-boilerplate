@@ -1,5 +1,5 @@
-name: Node setup
-description: "Install nodeJS dependencies"
+name: Setup Node
+description: "Install NodeJS and it's dependencies"
 inputs:
   node-version:
     description: 'The version of nodejs'
