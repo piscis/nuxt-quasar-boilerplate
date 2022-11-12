@@ -1,20 +1,27 @@
 {
   "private": true,
   "scripts": {
-    "dev": "nuxi dev",
-    "build": "nuxi build",
-    "start": "node .output/server/index.mjs"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@quasar/extras": "^1.11.3",
-    "nuxt3": "^3.0.0-27313139.1c88580",
-    "quasar": "^2.2.2"
+    "@quasar/extras": "^1.15.5",
+    "domino": "^2.1.6",
+    "jsdom": "^20.0.2",
+    "quasar": "^2.10.1"
   },
   "devDependencies": {
-    "@quasar/vite-plugin": "^1.0.1",
-    "sass": "1.32.0"
+    "@quasar/vite-plugin": "^1.2.3",
+    "@types/jsdom": "^20.0.1",
+    "nuxt": "3.0.0-rc.13",
+    "sass": "1.32.12"
   },
-  "volta": {
-    "node": "14.16.0"
+  "pnpm": {
+    "overrides": {
+      "@vueuse/head": "v1.0.0-rc.14"
+    }
   }
 }
