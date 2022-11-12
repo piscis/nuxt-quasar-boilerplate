@@ -1,6 +1,6 @@
 import { NuxtApp } from '#app';
 <template>
-  <q-page class="flex flex-center">
+  <div class="flex flex-center">
     <q-card>
       <q-card-section>
         <img
@@ -11,13 +11,22 @@ import { NuxtApp } from '#app';
       </q-card-section>
       <q-card-section>
         <p class="text-center">@NUXT3 RC13: vue@{{ version }}</p>
+        <div class="flex flex-center">
+          <q-btn @click="click">HELLO</q-btn>
+        </div>
       </q-card-section>
     </q-card>
-  </q-page>
+  </div>
 </template>
 
 <script setup lang="ts">
 const app = useNuxtApp();
+const route = useRoute();
+
+const click = () => {
+  const url = route.path === '/' ? '/complicated' : '/'
+  navigateTo(url);
+}
 
 const version = computed(() => {
   return app.vueApp.version;

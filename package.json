@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.15.5",
+    "@vueuse/core": "^9.5.0",
     "jsdom": "^20.0.2",
     "quasar": "^2.10.1"
   },
