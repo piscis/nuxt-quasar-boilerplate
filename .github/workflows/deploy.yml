@@ -9,6 +9,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Get code
+        uses: actions/checkout@v3
       - name: Setup
         uses: ./.github/actions/setup-node
       - name: Lint code
@@ -19,6 +21,8 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
+      - name: Get code
+        uses: actions/checkout@v3
       - name: Setup
         uses: ./.github/actions/setup-node
       - name: Build
@@ -27,6 +31,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Get code
+        uses: actions/checkout@v3
       - name: Setup
         uses: ./.github/actions/setup-node
       - name: Deploy
