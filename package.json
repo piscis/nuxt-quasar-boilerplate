@@ -24,7 +24,7 @@
     "@quasar/vite-plugin": "^1.2.3",
     "@types/jsdom": "^20.0.1",
     "nuxt": "3.0.0-rc.13",
-    "sass": "1.32.12"
+    "sass": "1.56.1"
   },
   "pnpm": {
     "overrides": {
