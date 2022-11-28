@@ -2,6 +2,8 @@ name: Build & Deploy
 on:
   push:
     branches: ["main"]
+  workflow_call:
+    
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
