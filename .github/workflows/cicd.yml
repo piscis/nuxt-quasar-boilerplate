@@ -7,12 +7,17 @@ on:
     branches: [main]
 jobs:
   test:
+    strategy:
+      matrix:
+        node-version: [16.x]
     runs-on: ubuntu-latest
     steps:
       - name: Get code
         uses: actions/checkout@v3
       - name: Setup
         uses: ./.github/actions/setup-node
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: Lint code
         run: pnpm run lint
       - name: Test code
@@ -20,6 +25,9 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
     steps:
       - name: Get code
         uses: actions/checkout@v3
