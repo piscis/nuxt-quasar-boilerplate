@@ -25,10 +25,5 @@
     "@types/jsdom": "^20.0.1",
     "nuxt": "3.0.0",
     "sass": "1.32.12"
-  },
-  "pnpm": {
-    "overrides": {
-      "@vueuse/head": "v1.0.0-rc.14"
-    }
   }
 }
