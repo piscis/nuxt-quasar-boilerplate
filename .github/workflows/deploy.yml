@@ -1,0 +1,43 @@
+name: Build & Deploy
+on:
+  push:
+    branches: ["main"]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup
+        uses: ./.github/actions/setup-node
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Build App
+        shell: bash
+        run: |
+          export NODE_ENV=production
+          pnpm run build
+      - uses: a7ul/tar-action@v1.1.0
+        with:
+          command: c
+          cwd: "./"
+          files: |
+            package.json
+            pnpm-lock.yaml
+            .output
+            Dockerfile
+            captain-definition
+          outPath: deploy.tar
+
+      - name: Deploy App to Caprover
+        uses: caprover/deploy-from-github@v1.0.1
+        with:
+          server: "${{ secrets.CAPROVER_SERVER }}"
+          app: "${{ secrets.APP_NAME }}"
+          token: "${{ secrets.APP_TOKEN }}"
