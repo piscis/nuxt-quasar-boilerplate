@@ -11,7 +11,7 @@
     "lint": "echo 'lint'"
   },
   "engines": {
-    "node": "16",
+    "node": "18",
     "pnpm": "7"
   },
   "dependencies": {
