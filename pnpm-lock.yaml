@@ -1,8 +1,5 @@
 lockfileVersion: 5.4
 
-overrides:
-  '@vueuse/head': v1.0.0-rc.14
-
 specifiers:
   '@quasar/extras': ^1.15.5
   '@quasar/vite-plugin': ^1.2.3
@@ -835,6 +832,16 @@ packages:
       '@unhead/schema': 1.0.4
     dev: true
 
+  /@unhead/vue/1.0.4_vue@3.2.45:
+    resolution: {integrity: sha512-dW4FY4SRNaoGcFXuk6dU2Fp7fFHluBZqdOxpekMKO3q4zn+sOcnqHdzDmSnXPgoqr4huumnG8zNjVsuyRQ0+Mg==}
+    peerDependencies:
+      vue: '>=2.7 || >=3'
+    dependencies:
+      '@unhead/schema': 1.0.4
+      hookable: 5.4.2
+      vue: 3.2.45
+    dev: true
+
   /@vercel/nft/0.22.1:
     resolution: {integrity: sha512-lYYZIoxRurqDOSoVIdBicGnpUIpfyaS5qVjdPq+EfI285WqtZK3NK/dyCkiyBul+X2U2OEhRyeMdXPCHGJbohw==}
     hasBin: true
@@ -1002,17 +1009,16 @@ packages:
       - vue
     dev: false
 
-  /@vueuse/head/1.0.0-rc.14_vue@3.2.45:
-    resolution: {integrity: sha512-3DtOfSE1141IKPIq4AR5UXQZPWQFSd7E5f3M+HkBRyxWsyxbNBBmK5hqkSYc2ENoFXa3xPhLYZXJPKuxqfJmiA==}
+  /@vueuse/head/1.0.18_vue@3.2.45:
+    resolution: {integrity: sha512-V3EuLoZFrMgvCQYSE0pJupYglZ0ID3rr/8ATIgnZNn+fjRrIEn8oAwAe8FRFAUKgBb0rZt+QY94PaDF6/HOLOQ==}
     peerDependencies:
       vue: '>=2.7 || >=3'
     dependencies:
-      '@vueuse/shared': 9.5.0_vue@3.2.45
-      '@zhead/schema': 0.9.9
-      '@zhead/schema-vue': 0.9.9_vue@3.2.45
+      '@unhead/dom': 1.0.4
+      '@unhead/schema': 1.0.4
+      '@unhead/ssr': 1.0.4
+      '@unhead/vue': 1.0.4_vue@3.2.45
       vue: 3.2.45
-    transitivePeerDependencies:
-      - '@vue/composition-api'
     dev: true
 
   /@vueuse/metadata/9.5.0:
@@ -1027,31 +1033,6 @@ packages:
       - '@vue/composition-api'
       - vue
     dev: false
-
-  /@vueuse/shared/9.5.0_vue@3.2.45:
-    resolution: {integrity: sha512-HnnCWU1Vg9CVWRCcI8ohDKDRB2Sc4bTgT1XAIaoLSfVHHn+TKbrox6pd3klCSw4UDxkhDfOk8cAdcK+Z5KleCA==}
-    dependencies:
-      vue-demi: 0.13.11_vue@3.2.45
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-      - vue
-    dev: true
-
-  /@zhead/schema-vue/0.9.9_vue@3.2.45:
-    resolution: {integrity: sha512-f7sOPMc1zQJ+tDDWWaksNsGoGGuRv5aHvOdZvsL3dIxbiHVlGVhDi/HZbUUupCtlYAPv2D8E/tUmwWKh/UrbXw==}
-    peerDependencies:
-      vue: '>=2.7 || >=3'
-    dependencies:
-      '@vueuse/shared': 9.5.0_vue@3.2.45
-      '@zhead/schema': 0.9.9
-      vue: 3.2.45
-    transitivePeerDependencies:
-      - '@vue/composition-api'
-    dev: true
-
-  /@zhead/schema/0.9.9:
-    resolution: {integrity: sha512-B/No5zsZB1gz6BT7OKcD0rbyZCGoF6ImeQm2ffupQrgUpYAIv/LGtn3RVNSOcX2R2DB4g79UtuIwK0OxugFjJQ==}
-    dev: true
 
   /@zhead/schema/1.0.4:
     resolution: {integrity: sha512-v/CM22nH0TW9VU5IcRXlshwrMtsZPnFQWhcLBvpZjOJvfEmjl8cUb6OIJQJRR2WESNjjPW2Cji8mgL9XSVLjxA==}
@@ -3359,7 +3340,7 @@ packages:
       '@unhead/ssr': 1.0.4
       '@vue/reactivity': 3.2.45
       '@vue/shared': 3.2.45
-      '@vueuse/head': 1.0.0-rc.14_vue@3.2.45
+      '@vueuse/head': 1.0.18_vue@3.2.45
       chokidar: 3.5.3
       cookie-es: 0.5.0
       defu: 6.1.1
@@ -3396,7 +3377,6 @@ packages:
       vue-router: 4.1.6_vue@3.2.45
     transitivePeerDependencies:
       - '@types/node'
-      - '@vue/composition-api'
       - bufferutil
       - debug
       - encoding
@@ -4852,21 +4832,6 @@ packages:
       '@vue/composition-api':
         optional: true
     dev: false
-
-  /vue-demi/0.13.11_vue@3.2.45:
-    resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      vue: 3.2.45
-    dev: true
 
   /vue-devtools-stub/0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
