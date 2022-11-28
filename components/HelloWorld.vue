@@ -10,7 +10,7 @@ import { NuxtApp } from '#app';
         />
       </q-card-section>
       <q-card-section>
-        <p class="text-center">@NUXT3 RC13: vue@{{ version }}</p>
+        <p class="text-center">@NUXT3.x: vue@{{ version }}</p>
         <div class="flex flex-center">
           <q-btn @click="click">HELLO</q-btn>
         </div>
