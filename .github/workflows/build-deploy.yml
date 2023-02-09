@@ -1,0 +1,150 @@
+name: Build & Deploy
+
+concurrency:
+  group: 'workflow = ${{ github.workflow }}, ref = ${{ github.event.ref }}, pr = ${{ github.event.pull_request.id }}'
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  setup-stage:
+    outputs:
+      env-name: ${{ steps.env-name.outputs.env }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup environment name
+        id: env-name
+        run: |
+          if [[ ${GITHUB_HEAD_REF} == dev/* ]]; then
+            echo "env=staging" >> $GITHUB_OUTPUT
+          elif [[ "${{github.ref}}" == "refs/heads/main" && "${{github.event_name}}" == "push" ]]; then
+            echo "env=production" >> $GITHUB_OUTPUT
+          else
+            echo "env=develop" >> $GITHUB_OUTPUT
+          fi
+
+  lint:
+    name: Lint ✅
+    needs: [setup-stage]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Check Environment
+        run: |
+          echo "Environment: ${{ needs.setup-stage.outputs.env-name }}"
+
+      - name: Setup
+        uses: ./.github/actions/setup-node
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Lint App
+        shell: bash
+        run: |
+          pnpm i
+          pnpm nuxi prepare
+          pnpm run lint
+
+  test:
+    name: Test 🧪
+    needs: [setup-stage]
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Check Environment
+        run: |
+          echo "Environment: ${{ needs.setup-stage.outputs.env-name }}"
+
+      - name: Setup
+        uses: ./.github/actions/setup-node
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Lint App
+        shell: bash
+        run: |
+          pnpm i
+          pnpm nuxi prepare
+          pnpm run test
+
+  build:
+    name: Build 🏗️
+    needs: [setup-stage, lint, test]
+    runs-on: ubuntu-latest
+    environment: ${{ needs.setup-stage.outputs.env-name }}
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Check Environment
+        run: |
+          echo "Environment: ${{ needs.setup-stage.outputs.env-name }}"
+
+      - name: Setup
+        uses: ./.github/actions/setup-node
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Build App
+        shell: bash
+        run: |
+          export NODE_ENV=production
+          pnpm run build
+
+      - uses: a7ul/tar-action@v1.1.2
+        if: contains(fromJson('["staging", "production"]'), needs.setup-stage.outputs.env-name)
+        with:
+          command: c
+          cwd: ./
+          files: |
+            package.json
+            pnpm-lock.yaml
+            .output
+            Dockerfile
+            captain-definition
+          outPath: deploy.tar
+      - uses: actions/upload-artifact@v3
+        if: contains(fromJson('["staging", "production"]'), needs.setup-stage.outputs.env-name)
+        with:
+          name: deployment-source
+          retention-days: 1
+          path: deploy.tar
+          if-no-files-found: error
+
+  deploy:
+    name: Deploy  🚀
+    runs-on: ubuntu-latest
+    environment: ${{ needs.setup-stage.outputs.env-name }}
+    needs: [setup-stage, build]
+    if: contains(fromJson('["staging", "production"]'), needs.setup-stage.outputs.env-name)
+    steps:
+
+      - uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
+        with:
+          name: deployment-source
+          path: ${{ github.workspace }}
+
+      - name: Deploy App to Caprover
+        uses: caprover/deploy-from-github@v1.1.2
+        with:
+          server: '${{ secrets.CAPROVER_SERVER }}'
+          app: '${{ secrets.APP_NAME }}'
+          token: '${{ secrets.APP_TOKEN }}'
