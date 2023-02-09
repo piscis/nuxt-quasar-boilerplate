@@ -1,6 +1,10 @@
 {
   "private": true,
   "packageManager": "pnpm@7.27.0",
+  "engines": {
+    "node": "18.x",
+    "pnpm": "7.x"
+  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -12,10 +16,6 @@
     "test:watch": "nuxi test --dev --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
-  },
-  "engines": {
-    "node": "18.x",
-    "pnpm": "7.x"
   },
   "dependencies": {
     "@quasar/extras": "^1.15.5",
