@@ -1,8 +1,15 @@
 import { quasar } from '@quasar/vite-plugin'
 
 export default defineNuxtConfig({
+  modules: [],
+  nitro: {
+    experimental: {
+      // Use nitropack v1 behavior
+      legacyExternals: true,
+    },
+  },
   build: {
-    transpile: ['quasar'],
+    transpile: ['quasar', 'happy-dom'],
   },
   css: [
     '@quasar/extras/roboto-font/roboto-font.css',
@@ -13,6 +20,9 @@ export default defineNuxtConfig({
   vite: {
     define: {
       // "process.env.DEBUG": false,
+    },
+    ssr: {
+      external: ['happy-dom'],
     },
     plugins: [
       quasar({
