@@ -3,13 +3,13 @@ import { quasar } from '@quasar/vite-plugin'
 export default defineNuxtConfig({
   modules: [],
   nitro: {
-    experimental: {
-      // Use nitropack v1 behavior
-      legacyExternals: true,
-    },
+    // experimental: {
+    // Use nitropack v1 behavior
+    // legacyExternals: true,
+    // },
   },
   build: {
-    transpile: ['quasar', 'happy-dom'],
+    transpile: ['quasar', '@happy-dom/global-registrator'],
   },
   css: [
     '@quasar/extras/roboto-font/roboto-font.css',
