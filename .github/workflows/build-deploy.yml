@@ -78,8 +78,8 @@ jobs:
         run: |
           pnpm i
           pnpm nuxi prepare
-          pnpm dlx playwright install   
-          
+          pnpm dlx playwright install
+
       - name: Run Tests
         run: pnpm nuxi test
 
