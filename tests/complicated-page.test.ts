@@ -1,5 +1,16 @@
 import { beforeAll, describe, expect, it } from 'vitest'
-import { $fetch } from '@nuxt/test-utils'
+import { $fetch, createPage } from '@nuxt/test-utils'
+import { toMatchImageSnapshot } from 'jest-image-snapshot'
+
+declare global {
+  namespace jest {
+    interface Matchers<R> {
+      toMatchImageSnapshot(): R
+    }
+  }
+}
+
+expect.extend({ toMatchImageSnapshot })
 
 describe('Complicated Page', () => {
   let doc: any
@@ -21,5 +32,14 @@ describe('Complicated Page', () => {
 
   it('Renders a container', async () => {
     expect(doc).toContain('q-drawer-container')
+  })
+
+  it('Complicated quasar layout gets rendered with quasar styles applied', async () => {
+    const page = await createPage('/complicated')
+    const buffer = await page.screenshot()
+    expect(buffer).toMatchImageSnapshot({
+      failureThreshold: 0.005,
+      failureThresholdType: 'percent',
+    })
   })
 })
