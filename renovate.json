@@ -9,6 +9,13 @@
     ":automergeTypes",
     ":automergeMinor"
   ],
+  "packageRules": [
+    { 
+      "matchPackageNames": ["sass"], 
+      "enabled": false,
+      "description": "keep sass version to 1.38.12 otherwise quasar styles break" 
+    }
+  ],
   "baseBranches": [
     "main"
   ]
