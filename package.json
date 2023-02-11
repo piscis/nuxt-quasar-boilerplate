@@ -3,7 +3,7 @@
   "private": true,
   "packageManager": "pnpm@7.27.0",
   "engines": {
-    "node": ">=16.x",
+    "node": ">=v16.19.0",
     "pnpm": "7.x"
   },
   "scripts": {
