@@ -13,8 +13,8 @@
     "start": "node .output/server/index.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "test": "JITI_ESM_RESOLVE=1 nuxi test",
+    "postinstall": "nuxt prepare && pnpm dlx playwright install",
+    "test": "nuxi test",
     "test:watch": "nuxi test --dev --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
