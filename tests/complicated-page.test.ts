@@ -38,8 +38,6 @@ describe('Complicated Page', () => {
     const page = await createPage('/complicated')
     const buffer = await page.screenshot()
     expect(buffer).toMatchImageSnapshot({
-      comparisonMethod: 'pixelmatch',
-      dumpDiffToConsole: true,
       failureThreshold: 0.005,
       failureThresholdType: 'percent',
     })
