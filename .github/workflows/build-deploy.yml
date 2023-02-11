@@ -73,13 +73,15 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Test App
+      - name: Prepare test
         shell: bash
         run: |
           pnpm i
           pnpm nuxi prepare
           pnpm dlx playwright install   
-          pnpm nuxi test
+          
+      - name: Run Tests
+        run: pnpm nuxi test
 
   build:
     name: Build 🏗️
