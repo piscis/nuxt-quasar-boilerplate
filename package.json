@@ -13,7 +13,7 @@
     "start": "node .output/server/index.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare && pnpm dlx playwright install",
+    "postinstall": "nuxt prepare",
     "test": "nuxi test",
     "test:watch": "nuxi test --dev --watch",
     "lint": "eslint .",
