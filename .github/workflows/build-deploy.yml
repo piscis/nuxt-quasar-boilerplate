@@ -78,7 +78,7 @@ jobs:
         run: |
           pnpm i
           pnpm nuxi prepare
-          pnpm run test
+          pnpm nuxi test
 
   build:
     name: Build 🏗️
