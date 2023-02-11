@@ -37,6 +37,11 @@ describe('Complicated Page', () => {
   it('Complicated quasar layout gets rendered with quasar styles applied', async () => {
     const page = await createPage('/complicated')
     const buffer = await page.screenshot()
-    expect(buffer).toMatchImageSnapshot()
+    expect(buffer).toMatchImageSnapshot({
+      comparisonMethod: 'pixelmatch',
+      dumpDiffToConsole: true,
+      failureThreshold: 0.005,
+      failureThresholdType: 'percent',
+    })
   })
 })

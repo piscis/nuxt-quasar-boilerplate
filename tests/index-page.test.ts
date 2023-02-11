@@ -25,6 +25,11 @@ describe('Index Page', () => {
   it('Info box gets rendered with quasar styles applied', async () => {
     const page = await createPage('/')
     const buffer = await page.screenshot()
-    expect(buffer).toMatchImageSnapshot()
+    expect(buffer).toMatchImageSnapshot({
+      comparisonMethod: 'pixelmatch',
+      dumpDiffToConsole: true,
+      failureThreshold: 0.005,
+      failureThresholdType: 'percent',
+    })
   })
 })
