@@ -78,6 +78,7 @@ jobs:
         run: |
           pnpm i
           pnpm nuxi prepare
+          pnpm dlx playwright install   
           pnpm nuxi test
 
   build:
