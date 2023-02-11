@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, it } from 'vitest'
-import { $fetch, getBrowser, url } from '@nuxt/test-utils'
+import { $fetch, createPage } from '@nuxt/test-utils'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
 declare global {
@@ -35,10 +35,7 @@ describe('Complicated Page', () => {
   })
 
   it('Complicated quasar layout gets rendered with quasar styles applied', async () => {
-    const browser = await getBrowser()
-    const context = await browser.newContext()
-    const page = await context.newPage()
-    await page.goto(url('/complicated'))
+    const page = await createPage('/complicated')
     const buffer = await page.screenshot()
     expect(buffer).toMatchImageSnapshot()
   })
