@@ -86,6 +86,12 @@ jobs:
       - name: Run Tests
         run: CI=true pnpm run test
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: test-source
+          retention-days: 1
+          path: tests
+
   build:
     name: Build 🏗️
     needs: [setup-stage, lint, test]
