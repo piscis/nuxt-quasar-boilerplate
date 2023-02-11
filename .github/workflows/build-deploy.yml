@@ -84,7 +84,7 @@ jobs:
         run: pnpm playwright install chromium
 
       - name: Run Tests
-        run: pnpm run test
+        run: CI=true pnpm run test
 
   build:
     name: Build 🏗️
