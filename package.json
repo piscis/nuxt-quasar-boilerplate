@@ -14,7 +14,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "nuxi test",
+    "test": "JITI_ESM_RESOLVE=1 nuxi test",
     "test:watch": "nuxi test --dev --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
