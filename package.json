@@ -1,5 +1,6 @@
 {
   "private": true,
+  "version": "1.0.0",
   "packageManager": "pnpm@7.27.0",
   "engines": {
     "node": ">=16.x",
