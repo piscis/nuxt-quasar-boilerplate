@@ -27,7 +27,7 @@ describe('Complicated Page', () => {
   })
 
   it('Renders a header', async () => {
-    expect(doc).toContain('q-headerr')
+    expect(doc).toContain('q-header')
   })
 
   it('Renders a container', async () => {
