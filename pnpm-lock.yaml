@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.35.2
-  '@happy-dom/global-registrator': ^8.3.2
+  '@happy-dom/global-registrator': ^8.4.0
   '@nuxt/test-utils': ^3.2.0
   '@quasar/extras': ^1.15.11
   '@quasar/vite-plugin': ^1.3.0
@@ -19,7 +19,7 @@ specifiers:
   vitest: ^0.28.5
 
 dependencies:
-  '@happy-dom/global-registrator': 8.3.2
+  '@happy-dom/global-registrator': 8.4.0
   '@quasar/extras': 1.15.11
   '@vueuse/core': 9.12.0
   quasar: 2.11.6
@@ -872,10 +872,10 @@ packages:
       - supports-color
     dev: true
 
-  /@happy-dom/global-registrator/8.3.2:
-    resolution: {integrity: sha512-/EhBn0KNnkZjdkxK4v3C2+iuJBS0/JheNvRc1xZ6ijxftkmx9Yh0pk7xtsOMTyzzsLbJ1FbmDJXmxG3eomPvAg==}
+  /@happy-dom/global-registrator/8.4.0:
+    resolution: {integrity: sha512-FV2Idx0V0laD56eQGhmcO6No5KXriPmGcf1gXxLzeXvAWCecxnaD33+DKsqGTE65GCRVQG+tLKCYmmZ1RbLibg==}
     dependencies:
-      happy-dom: 8.3.2
+      happy-dom: 8.4.0
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -3943,8 +3943,8 @@ packages:
       uncrypto: 0.1.2
     dev: true
 
-  /happy-dom/8.3.2:
-    resolution: {integrity: sha512-Z0RigOkogHBIkkG/G3WHh5mMVZEO5Q8zSNFKEJ/e19kq83dbrHjWJJKOIXsDLOu9KtqM8QKj9IinpZC/tRNIQA==}
+  /happy-dom/8.4.0:
+    resolution: {integrity: sha512-FLqMCrgTAh3dK9YAQk0cFI0E2icr/E1SzSvCsEHATzHCpB92jfSaCCSVD/cRdmLjm0eLkh1vbBe90wi3qGU0kQ==}
     dependencies:
       css.escape: 1.5.1
       he: 1.2.0
