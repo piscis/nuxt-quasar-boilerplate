@@ -1,11 +1,15 @@
-import { NuxtApp } from '#app';
 <script setup lang="ts">
 const app = useNuxtApp()
 const route = useRoute()
+const $q = useQuasar()
 
 const click = () => {
   const url = route.path === '/' ? '/complicated' : '/'
   navigateTo(url)
+}
+
+const toggleMode = () => {
+  $q.dark.toggle()
 }
 
 const version = computed(() => {
@@ -30,6 +34,9 @@ const version = computed(() => {
         <div class="flex flex-center">
           <q-btn @click="click">
             HELLO
+          </q-btn>
+          <q-btn @click="toggleMode">
+            Dark
           </q-btn>
         </div>
       </q-card-section>
