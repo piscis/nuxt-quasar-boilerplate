@@ -30,4 +30,13 @@ describe('Index Page', () => {
       failureThresholdType: 'percent',
     })
   })
+
+  it('should render the info box in dark mode', async () => {
+    const page = await createPage('/?dark=1')
+    const buffer = await page.screenshot()
+    expect(buffer).toMatchImageSnapshot({
+      failureThreshold: 0.005,
+      failureThresholdType: 'percent',
+    })
+  })
 })
