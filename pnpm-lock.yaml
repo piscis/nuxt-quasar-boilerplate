@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.35.2
-  '@happy-dom/global-registrator': ^8.7.1
+  '@happy-dom/global-registrator': ^8.7.2
   '@nuxt/test-utils': ^3.2.2
   '@quasar/extras': ^1.15.11
   '@quasar/vite-plugin': ^1.3.0
@@ -11,7 +11,7 @@ specifiers:
   eslint: ^8.34.0
   jest-image-snapshot: ^6.1.0
   nuxt: ^3.2.2
-  playwright: ^1.31.0
+  playwright: ^1.31.1
   quasar: ^2.11.6
   rimraf: ^4.1.2
   sass: 1.32.12
@@ -19,7 +19,7 @@ specifiers:
   vitest: ^0.28.5
 
 dependencies:
-  '@happy-dom/global-registrator': 8.7.1
+  '@happy-dom/global-registrator': 8.7.2
   '@quasar/extras': 1.15.11
   '@vueuse/core': 9.13.0
   quasar: 2.11.6
@@ -32,7 +32,7 @@ devDependencies:
   eslint: 8.34.0
   jest-image-snapshot: 6.1.0
   nuxt: 3.2.2_obqa765vzspsk6d33vcvadjtju
-  playwright: 1.31.0
+  playwright: 1.31.1
   rimraf: 4.1.2
   sass: 1.32.12
   typescript: 4.9.5
@@ -872,10 +872,10 @@ packages:
       - supports-color
     dev: true
 
-  /@happy-dom/global-registrator/8.7.1:
-    resolution: {integrity: sha512-I+fL4WfYXdzLSjBLrsbjHsSXhgPqmqRDH8rog7MfzQE2R8GyY+dDGsb5VjoIOt1zR+ZvdWAS804Kzt5N9D641g==}
+  /@happy-dom/global-registrator/8.7.2:
+    resolution: {integrity: sha512-VVvUVgopspTyUkk8Mo+iGTkDkaNe+H3nZOj2UFUKTb72z8hbvWeYC+YxF+6OmMcKPXQu3gCq7wFahDuum9Pbcw==}
     dependencies:
-      happy-dom: 8.7.1
+      happy-dom: 8.7.2
     transitivePeerDependencies:
       - encoding
     dev: false
@@ -3951,8 +3951,8 @@ packages:
       uncrypto: 0.1.2
     dev: true
 
-  /happy-dom/8.7.1:
-    resolution: {integrity: sha512-/z+B/LUEETO9qGbUw80TTCjyhibmczB7OF1XxJ+UU1LlFOBkqO+GCVM+lDaQKVH62HxvX4sbu/EL2KlUtmyyZw==}
+  /happy-dom/8.7.2:
+    resolution: {integrity: sha512-lkm1l7SLNtI9svaU3PflbM8zahYahLrUZf0fZTUkQ8W6bo5gtXjC/2utOkcjpv9rhWTkHFUuDVjAvBWg4ClAxA==}
     dependencies:
       css.escape: 1.5.1
       he: 1.2.0
@@ -5511,19 +5511,19 @@ packages:
       pathe: 1.1.0
     dev: true
 
-  /playwright-core/1.31.0:
-    resolution: {integrity: sha512-/KquBjS5DcASCh8cGeNVHuC0kyb7c9plKTwaKxgOGtxT7+DZO2fjmFvPDBSXslEIK5CeOO/2kk5rOCktFXKEdA==}
+  /playwright-core/1.31.1:
+    resolution: {integrity: sha512-JTyX4kV3/LXsvpHkLzL2I36aCdml4zeE35x+G5aPc4bkLsiRiQshU5lWeVpHFAuC8xAcbI6FDcw/8z3q2xtJSQ==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /playwright/1.31.0:
-    resolution: {integrity: sha512-cFn1ie3bdYw/9/Ty3842CfPSRSy+ZWPjEhrxWgC+jL/CUjq5RKVJZwUbXV1UKBQU1Vo0NetsokXmk9EEZiqVHQ==}
+  /playwright/1.31.1:
+    resolution: {integrity: sha512-zKJabsIA2rvOwJ12lGTqWv4HVJzlfw2JtUvO4hAr7J8UXQZ1qEPpX20E1vcz/9fotnTkwgqp3CVdIBwptBN3Fg==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.31.0
+      playwright-core: 1.31.1
     dev: true
 
   /pluralize/8.0.0:
