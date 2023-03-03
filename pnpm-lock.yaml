@@ -11,9 +11,9 @@ specifiers:
   eslint: ^8.35.0
   jest-image-snapshot: ^6.1.0
   nuxt: ^3.2.3
-  playwright: ^1.31.1
+  playwright: ^1.31.2
   quasar: ^2.11.7
-  rimraf: ^4.1.3
+  rimraf: ^4.2.0
   sass: 1.32.12
   typescript: ^4.9.5
   vitest: ^0.29.2
@@ -32,8 +32,8 @@ devDependencies:
   eslint: 8.35.0
   jest-image-snapshot: 6.1.0
   nuxt: 3.2.3_rpieqix5biicgyanlolrnfcvs4
-  playwright: 1.31.1
-  rimraf: 4.1.3
+  playwright: 1.31.2
+  rimraf: 4.2.0
   sass: 1.32.12
   typescript: 4.9.5
   vitest: 0.29.2_sass@1.32.12
@@ -3899,6 +3899,16 @@ packages:
       once: 1.4.0
     dev: true
 
+  /glob/9.2.1:
+    resolution: {integrity: sha512-Pxxgq3W0HyA3XUvSXcFhRSs+43Jsx0ddxcFrbjxNGkL2Ak5BAUBxLqI5G6ADDeCHLfzzXFhe0b1yYcctGmytMA==}
+    engines: {node: '>=16 || 14 >=14.17'}
+    dependencies:
+      fs.realpath: 1.0.0
+      minimatch: 7.4.2
+      minipass: 4.2.4
+      path-scurry: 1.6.1
+    dev: true
+
   /globals/11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
     engines: {node: '>=4'}
@@ -4916,6 +4926,13 @@ packages:
       brace-expansion: 2.0.1
     dev: true
 
+  /minimatch/7.4.2:
+    resolution: {integrity: sha512-xy4q7wou3vUoC9k1xGTXc+awNdGaGVHtFUaey8tiX4H1QRc04DZ/rmDFwNm2EBsuYEhAZ6SgMmYf3InGY6OauA==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
   /minimist/1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
@@ -5497,6 +5514,14 @@ packages:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
     dev: true
 
+  /path-scurry/1.6.1:
+    resolution: {integrity: sha512-OW+5s+7cw6253Q4E+8qQ/u1fVvcJQCJo/VFD8pje+dbJCF1n5ZRMV2AEHbGp+5Q7jxQIYJxkHopnj6nzdGeZLA==}
+    engines: {node: '>=14'}
+    dependencies:
+      lru-cache: 7.17.0
+      minipass: 4.2.4
+    dev: true
+
   /path-type/4.0.0:
     resolution: {integrity: sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==}
     engines: {node: '>=8'}
@@ -5543,19 +5568,19 @@ packages:
       pathe: 1.1.0
     dev: true
 
-  /playwright-core/1.31.1:
-    resolution: {integrity: sha512-JTyX4kV3/LXsvpHkLzL2I36aCdml4zeE35x+G5aPc4bkLsiRiQshU5lWeVpHFAuC8xAcbI6FDcw/8z3q2xtJSQ==}
+  /playwright-core/1.31.2:
+    resolution: {integrity: sha512-a1dFgCNQw4vCsG7bnojZjDnPewZcw7tZUNFN0ZkcLYKj+mPmXvg4MpaaKZ5SgqPsOmqIf2YsVRkgqiRDxD+fDQ==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
 
-  /playwright/1.31.1:
-    resolution: {integrity: sha512-zKJabsIA2rvOwJ12lGTqWv4HVJzlfw2JtUvO4hAr7J8UXQZ1qEPpX20E1vcz/9fotnTkwgqp3CVdIBwptBN3Fg==}
+  /playwright/1.31.2:
+    resolution: {integrity: sha512-jpC47n2PKQNtzB7clmBuWh6ftBRS/Bt5EGLigJ9k2QAKcNeYXZkEaDH5gmvb6+AbcE0DO6GnXdbl9ogG6Eh+og==}
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      playwright-core: 1.31.1
+      playwright-core: 1.31.2
     dev: true
 
   /pluralize/8.0.0:
@@ -6143,10 +6168,12 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rimraf/4.1.3:
-    resolution: {integrity: sha512-iyzalDLo3l5FZxxaIGUY7xI4Bf90Xt7pCipc1Mr7RsdU7H3538z+M0tlsUDrz0aHeGS9uNqiKHUJyTewwRP91Q==}
+  /rimraf/4.2.0:
+    resolution: {integrity: sha512-tPt+gLORNVqRCk0NwuJ5SlMEcOGvt4CCU8sUPqgCFtCbnoNCTd9Q6vq7JlBbxQlACiH14OR28y7piA2Bak9Sxw==}
     engines: {node: '>=14'}
     hasBin: true
+    dependencies:
+      glob: 9.2.1
     dev: true
 
   /rollup-plugin-visualizer/5.9.0_rollup@3.17.3:
