@@ -13,7 +13,7 @@ specifiers:
   nuxt: ^3.2.3
   playwright: ^1.31.2
   quasar: ^2.11.7
-  rimraf: ^4.2.0
+  rimraf: ^4.3.0
   sass: 1.32.12
   typescript: ^4.9.5
   vitest: ^0.29.2
@@ -33,7 +33,7 @@ devDependencies:
   jest-image-snapshot: 6.1.0
   nuxt: 3.2.3_rpieqix5biicgyanlolrnfcvs4
   playwright: 1.31.2
-  rimraf: 4.2.0
+  rimraf: 4.3.0
   sass: 1.32.12
   typescript: 4.9.5
   vitest: 0.29.2_sass@1.32.12
@@ -6168,8 +6168,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rimraf/4.2.0:
-    resolution: {integrity: sha512-tPt+gLORNVqRCk0NwuJ5SlMEcOGvt4CCU8sUPqgCFtCbnoNCTd9Q6vq7JlBbxQlACiH14OR28y7piA2Bak9Sxw==}
+  /rimraf/4.3.0:
+    resolution: {integrity: sha512-5qVDXPbByA1qSJEWMv1qAwKsoS22vVpsL2QyxCKBw4gf6XiFo1K3uRLY6uSOOBFDwnqAZtnbILqWKKlzh8bkGg==}
     engines: {node: '>=14'}
     hasBin: true
     dependencies:
