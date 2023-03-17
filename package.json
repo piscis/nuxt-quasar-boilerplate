@@ -23,7 +23,7 @@
     "@happy-dom/global-registrator": "^8.9.0",
     "@quasar/extras": "^1.15.11",
     "@vueuse/core": "^9.13.0",
-    "quasar": "^2.11.7"
+    "quasar": "^2.11.8"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.36.0",
