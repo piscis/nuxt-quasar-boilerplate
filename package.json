@@ -34,7 +34,7 @@
     "jest-image-snapshot": "^6.1.0",
     "nuxt": "^3.5.1",
     "playwright": "^1.32.1",
-    "rimraf": "^4.4.1",
+    "rimraf": "^5.0.1",
     "sass": "1.32.12",
     "typescript": "^4.9.5",
     "vitest": "^0.29.8"
