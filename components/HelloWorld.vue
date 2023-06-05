@@ -3,12 +3,12 @@ const app = useNuxtApp()
 const route = useRoute()
 const $q = useQuasar()
 
-const click = () => {
+function click() {
   const url = route.path === '/' ? '/complicated' : '/'
   navigateTo(url)
 }
 
-const toggleMode = () => {
+function toggleMode() {
   $q.dark.toggle()
 }
 

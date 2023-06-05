@@ -3,6 +3,7 @@ import { $fetch, createPage } from '@nuxt/test-utils'
 import { toMatchImageSnapshot } from 'jest-image-snapshot'
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace jest {
     interface Matchers<R> {
       toMatchImageSnapshot(): R
