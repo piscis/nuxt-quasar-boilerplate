@@ -20,7 +20,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@happy-dom/global-registrator": "^8.9.0",
+    "@happy-dom/global-registrator": "^9.20.3",
     "@quasar/extras": "^1.16.1",
     "@vueuse/core": "^10.1.2",
     "quasar": "^2.11.9"
