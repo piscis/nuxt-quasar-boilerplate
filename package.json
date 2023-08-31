@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@8.7.1",
   "engines": {
     "node": ">=v16.20.2",
     "pnpm": "8.x"
@@ -21,22 +21,22 @@
   },
   "dependencies": {
     "@happy-dom/global-registrator": "^9.20.3",
-    "@quasar/extras": "^1.16.5",
-    "@vueuse/core": "^10.3.0",
+    "@quasar/extras": "^1.16.6",
+    "@vueuse/core": "^10.4.1",
     "quasar": "^2.12.5"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.40.2",
+    "@antfu/eslint-config": "^0.41.0",
     "@nuxt/test-utils": "^3.6.5",
     "@quasar/vite-plugin": "^1.4.1",
     "@types/jest-image-snapshot": "^6.2.0",
-    "eslint": "^8.47.0",
+    "eslint": "^8.48.0",
     "jest-image-snapshot": "^6.2.0",
     "nuxt": "^3.6.5",
     "playwright": "^1.37.1",
     "rimraf": "^5.0.1",
     "sass": "1.32.12",
-    "typescript": "^5.1.6",
-    "vitest": "^0.34.2"
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.3"
   }
 }
