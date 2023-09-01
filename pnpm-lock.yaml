@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@happy-dom/global-registrator':
-    specifier: ^9.20.3
-    version: 9.20.3
+    specifier: ^10.11.2
+    version: 10.11.2
   '@quasar/extras':
     specifier: ^1.16.6
     version: 1.16.6
@@ -1092,10 +1092,10 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@happy-dom/global-registrator@9.20.3:
-    resolution: {integrity: sha512-B0QBs7KNa6QnypXUMSFZLf38Lttwqtfw2fWG+BiJfzn93rITQxDTxwHMIYIWJIYUmmidjITOCEwYbA0O0Vjgjg==}
+  /@happy-dom/global-registrator@10.11.2:
+    resolution: {integrity: sha512-nlY3qUUpaVkUVSZaS7Bq1z3JiQy7N9k68P4As/pRN2LvfKW+PZBOJBUVYSJp8i5eUw3hDnBEViSELvifD0UTPw==}
     dependencies:
-      happy-dom: 9.20.3
+      happy-dom: 10.11.2
     dev: false
 
   /@humanwhocodes/config-array@0.11.10:
@@ -4156,8 +4156,8 @@ packages:
       unenv: 1.7.4
     dev: true
 
-  /happy-dom@9.20.3:
-    resolution: {integrity: sha512-eBsgauT435fXFvQDNcmm5QbGtYzxEzOaX35Ia+h6yP/wwa4xSWZh1CfP+mGby8Hk6Xu59mTkpyf72rUXHNxY7A==}
+  /happy-dom@10.11.2:
+    resolution: {integrity: sha512-rzgmLjLkhyaOdFEyU8CWXzbgyCyM7wJHLqhaoeEVSTyur1fjcUaiNTHx+D4CPaLvx16tGy+SBPd9TVnP/kzL3w==}
     dependencies:
       css.escape: 1.5.1
       entities: 4.5.0
