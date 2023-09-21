@@ -35,7 +35,7 @@ jobs:
         node-version: [18.x, 16.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Check Environment
         run: |
@@ -62,7 +62,7 @@ jobs:
         node-version: [18.x, 16.x]
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Check Environment
         run: |
@@ -103,7 +103,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Check Environment
         run: |
@@ -148,7 +148,7 @@ jobs:
     if: contains(fromJson('["staging", "production"]'), needs.setup-stage.outputs.env-name)
     steps:
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v3
         with:
           name: deployment-source
