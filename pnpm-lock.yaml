@@ -23,7 +23,7 @@ devDependencies:
     specifier: ^0.43.1
     version: 0.43.1(eslint@8.52.0)(typescript@5.2.2)
   '@nuxt/test-utils':
-    specifier: ^3.7.4
+    specifier: ^3.8.0
     version: 3.8.0(vitest@0.34.6)(vue@3.3.6)
   '@quasar/vite-plugin':
     specifier: ^1.5.0
@@ -38,7 +38,7 @@ devDependencies:
     specifier: ^6.2.0
     version: 6.2.0
   nuxt:
-    specifier: ^3.7.4
+    specifier: ^3.8.0
     version: 3.8.0(eslint@8.52.0)(sass@1.32.12)(typescript@5.2.2)(vite@4.5.0)
   playwright:
     specifier: ^1.39.0
