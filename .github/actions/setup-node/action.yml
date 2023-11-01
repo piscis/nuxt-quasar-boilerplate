@@ -17,7 +17,7 @@ runs:
         version: 8
         run_install: false
     - name: Install NodeJS
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '${{ inputs.node-version }}'
         cache: '${{ inputs.package-manager }}'
