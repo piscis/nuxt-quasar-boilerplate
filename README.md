@@ -6,7 +6,7 @@ Hello there and thank you for the interrest in this boilerplate repo. I have to 
 
 Also have a look at this [ticket](https://github.com/quasarframework/quasar/issues/11165) about the potention native support of nuxt3 with quasar.
 
-**Demo:** https://nuxt3-quasar.pirsig.net/
+**Demo:** https://nuxt3-quasar.piscis.dev/
 
 Any way since I switched over the fake-dom plugin to `happy-dom` instead of `JSDOM` all rehydration errors caused through the missing intersection observer api's in jsdom are gone. So test this carefully but SSR for complicated layouts should be possible now!!!!
 
